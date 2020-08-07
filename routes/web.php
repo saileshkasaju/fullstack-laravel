@@ -16,3 +16,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/new', 'TestController@controllerMethod');
+
+Route::get('/new/json', 'TestController@controllerMethodReturnJson');
+Route::get('/new/withmeta/{id}', 'TestController@controllerMethodWithMeta');
+
+Route::get('/new/{id}', function ($id) {
+    return view('welcome');
+});
+
+Route::any('{slug}', function () {
+    return view('welcome');
+});
+
+Route::any('{slug1}/{slug2}', function () {
+    return view('welcome');
+});
+
+Route::any('{slug1}/{slug2}/{slug3}', function () {
+    return view('welcome');
+});
