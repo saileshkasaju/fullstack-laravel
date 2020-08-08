@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
+    public function test() {
+        return response() -> json([
+            'msg' => 'tag created'
+        ], 422);
+    }
     public function controllerMethod() {
         return view('welcome');
     }

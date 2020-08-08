@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('/app/create_tag', 'AdminController@addTag');
+Route::get('/app/get_tags', 'AdminController@getTags');
+
 Route::get('/new', 'TestController@controllerMethod');
 
 Route::get('/new/json', 'TestController@controllerMethodReturnJson');

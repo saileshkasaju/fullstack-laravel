@@ -6,6 +6,7 @@
 
         <title>full stack blog</title>
         {{$metadataarray?? ''}}
+        <link rel="stylesheet" href="{{mix('/css/all.css')}}"></link>
     </head>
     <body>
         <div id="app">
