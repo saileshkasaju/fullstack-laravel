@@ -18,7 +18,10 @@ Route::get('/', function () {
 });
 
 Route::post('/app/create_tag', 'AdminController@addTag');
+Route::post('/app/edit_tag', 'AdminController@editTag');
 Route::get('/app/get_tags', 'AdminController@getTags');
+Route::delete('/app/delete_tag/{id}', 'AdminController@deleteTag');
+Route::post('/app/upload', 'AdminController@upload');
 
 Route::get('/new', 'TestController@controllerMethod');
 

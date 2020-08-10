@@ -16,4 +16,5 @@ mix.js("resources/js/app.js", "public/js")
     .styles(
         ["resources/css/grid.min.css", "resources/css/main.css"],
         "public/css/all.css"
-    );
+    )
+    .copyDirectory("resources/fonts/hk-grotesk", "public/fonts/hk-grotesk");

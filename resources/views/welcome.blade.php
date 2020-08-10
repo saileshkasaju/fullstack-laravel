@@ -7,6 +7,15 @@
         <title>full stack blog</title>
         {{$metadataarray?? ''}}
         <link rel="stylesheet" href="{{mix('/css/all.css')}}"></link>
+        <script>
+            // following snippet does not work !!
+            (function() { 
+                window.Laravel = {
+                    csrfToken = '{{ csrf_token() }}'
+                };
+            })();
+        </script>
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
     </head>
     <body>
         <div id="app">
